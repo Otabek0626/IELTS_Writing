@@ -1,0 +1,37 @@
+export default [{
+    id: '1',
+    type: 'Bar',
+    title: 'Hello',
+    image: require('./images/1.png'),
+    answer: 'answer',
+    band: '9',
+    comment: 'very good',
+  },
+  {
+    id: '2',
+    type: 'line',
+    title: '',
+    image: require('./images/1.png'),
+    answer: '',
+    band: '',
+    comment: '',
+  },
+  {
+    id: '3',
+    type: 'table',
+    title: '',
+    image: require('./images/1.png'),
+    answer: '',
+    band: '',
+    comment: '',
+  },
+  {
+    id: '4',
+    type: 'pie',
+    title: '',
+    image: require('./images/1.png'),
+    answer: '',
+    band: '',
+    comment: '',
+  }
+];

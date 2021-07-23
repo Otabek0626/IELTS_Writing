@@ -10,7 +10,7 @@ import AnswerOneScreen from './screens/AnswerOneScreen';
 const Stack = createStackNavigator();
 
 const globalScreenOptions = {
-  headerStyle: { backgroundColor: "#2C6BED" },
+  headerStyle: { backgroundColor: '#2E4557', },
   headerTitleStyle: { color: "white" },
   headerTintColor: "white", 
 }
@@ -20,9 +20,8 @@ export default function App() {
       <NavigationContainer style={styles.container}>
         <StatusBar style="auto" />
         <Stack.Navigator screenOptions={globalScreenOptions}>
-          <Stack.Screen name="Home" component={HomeScreen} options={{ title: 'IELTS Writing Band 9', headerTitleStyle: { alignSelf: 'center' }, }} />
+          <Stack.Screen name="Home" component={HomeScreen} options={{ title: 'IELTS Writing'}} />
           <Stack.Screen name="TaskOne" component={TaskScreen} options={{ title: 'Task 1' }} />
-          <Stack.Screen name="TaskTwo" component={TaskScreen} options={{ title: 'Task 2' }} />
           <Stack.Screen name="AnswerOne" component={AnswerOneScreen} options={{ title: 'Task 1 Answer' }} />
 
         </Stack.Navigator>

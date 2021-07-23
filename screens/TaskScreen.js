@@ -20,7 +20,7 @@ import TaskOne from '../database/TaskOne';
                          title: item.title,
                          image: item.image,
                          answer: item.answer,
-                         band: item.brand,
+                         band: item.band,
                          comment: item.comment,
                          
                     }     
@@ -44,7 +44,7 @@ import TaskOne from '../database/TaskOne';
 
     container: {
       flex: 1,
-      marginTop: StatusBar.currentHeight || 0,
+      marginBottom: '10%'
     },
     id: {
       fontSize: 25,
@@ -57,9 +57,6 @@ import TaskOne from '../database/TaskOne';
       fontSize: 20,
       marginHorizontal: 10,
       marginTop: 10,
-  },
-  container: {
-      marginBottom: '10%'
   },
   item: {
       flexDirection: "row",

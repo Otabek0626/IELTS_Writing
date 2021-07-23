@@ -1,9 +1,9 @@
 import React from 'react'
-import { StyleSheet, Text, View, Pressable, Image } from 'react-native'
+import { StyleSheet, Text, View, Pressable, Image, Dimensions } from 'react-native'
 
 const StyledButton = (props) => {
 
-    const { content, image, onPress } = props;
+    const { content, image, text, onPress } = props;
   
     
   
@@ -13,13 +13,12 @@ const StyledButton = (props) => {
           style={styles.button}
           onPress={() => onPress()}
           >
+          <Text style={styles.text}>{content}</Text>
           <Image
             style={styles.logo}
-            source={{
-                uri: image,
-            }}
+            source={image}
             /> 
-          <Text style={styles.text}>{content}</Text>
+          <Text style={[styles.text, {fontSize: 12, textAlign: "center"}]}>{text}</Text>
         </Pressable>
       </View>
     );
@@ -29,10 +28,10 @@ export default StyledButton
 
 const styles = StyleSheet.create({
     container: {
-        width: '40%',
+        width: Dimensions.get('window').width/100*45,
         height: "100%",
-        margin: 20,
-        backgroundColor: 'white',
+        margin: 5,
+        backgroundColor: '#2E4557',
         borderRadius: 10,
       },
       button: {
@@ -42,13 +41,14 @@ const styles = StyleSheet.create({
         alignItems: 'center',
       },
       logo: {
-        width: "40%",
-        height: "50%",
-        borderRadius: 50,
+        width: "30%",
+        height: "33%",
+        margin: "5%",
       },
       text: {
         marginTop: 5,
-        fontSize: 18,
+        fontSize: 15,
         fontWeight: '700',
+        color: "white",
       }
 })
